@@ -22,11 +22,10 @@ namespace ForeachnMyEnum
             collection1.Add("dd");
             collection1.Add("dddd");
             collection1.Add("dddd");
-            int j = collection1.Data[1];
+            string j = collection1.Data[1];
             foreach (var item in collection)
             {
                 Console.WriteLine(item);
-                //object p = item.Dump();
             }
         }
     }
@@ -53,7 +52,7 @@ namespace ForeachnMyEnum
         {
             _myCollection = collection;
         }
-        public int Current => _myCollection[_pointer];
+        public T Current => _myCollection[_pointer];
         public bool MoveNext() => ++_pointer < _myCollection.Data.Count;
 
 
