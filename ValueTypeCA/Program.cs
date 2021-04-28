@@ -10,18 +10,18 @@ namespace ValueTypeCA
     {
         static void Main(string[] args)
         {
-            List<Ebalo> listofEbalos = new List<Ebalo>();
-            ParseListofebalos(listofEbalos);
+            List<Tabalo> listofTabalos = new List<Tabalo>();
+            ParseListofTabalos(listofTabalos);
             LinkedList<string> listofstr = new LinkedList<string>();
             ParseListofstr(listofstr);
 
-            Ebalo eblo = new Ebalo("ebalo", 5);
-            Ebalo eblo2 = new Ebalo("ebalo", 5);
-            if (eblo2.GetHashCode() == eblo.GetHashCode())
+            Tabalo tablo = new Tabalo("Tabalo", 5);
+            Tabalo tablo2 = new Tabalo("Tabalo", 5);
+            if (tablo2.GetHashCode() == tablo.GetHashCode())
             {
-                bool same = eblo.Equals(eblo2);
+                bool same = tablo.Equals(tablo2);
             }
-            Type type = eblo.GetType();
+            Type type = tablo.GetType();
 
             char[] value = "second".ToCharArray();
             String str3 = new String("second".ToCharArray());
@@ -29,8 +29,8 @@ namespace ValueTypeCA
             int i = str3.GetHashCode();
             int i2 = str4.GetHashCode();
             //UpdateString(ref );
-            UpdateObject(eblo);
-            string str = "ebalo";
+            UpdateObject(tablo);
+            string str = "Tabalo";
             object obj1 = str;
             char[] strarr = str.ToCharArray();
             //UpdateString(ref str);
@@ -40,44 +40,44 @@ namespace ValueTypeCA
             Console.WriteLine(str3);
             //Console.WriteLine(obj1);
             //Console.WriteLine(strarr);
-            //Console.WriteLine(eblo.S);
-            //Console.WriteLine(eblo.I);
+            //Console.WriteLine(tablo.S);
+            //Console.WriteLine(tablo.I);
             Console.ReadKey();
         }
 
         private static void ParseListofstr(LinkedList<string> listofstr)
         {
-            Ebalo eblo1 = new Ebalo("ebalo", 5);
-            Ebalo eblo2 = new Ebalo("ebalo", 15);
-            Ebalo eblo3 = new Ebalo("ebalo", 15);
-            listofstr.AddFirst("ebalo");
-            listofstr.AddLast("ebalo1");
-            listofstr.AddLast("ebalo2");
+            Tabalo tablo1 = new Tabalo("Tabalo", 5);
+            Tabalo tablo2 = new Tabalo("Tabalo", 15);
+            Tabalo tablo3 = new Tabalo("Tabalo", 15);
+            listofstr.AddFirst("Tabalo");
+            listofstr.AddLast("Tabalo1");
+            listofstr.AddLast("Tabalo2");
         }
 
-        private static void ParseListofebalos(List<Ebalo> listofEbalos)
+        private static void ParseListofTabalos(List<Tabalo> listofTabalos)
         {
-            Ebalo eblo1 = new Ebalo("ebalo", 5);
-            Ebalo eblo2 = new Ebalo("ebalo", 15);
-            Ebalo eblo3 = new Ebalo("ebalo", 15);
-            listofEbalos.Add(eblo1);
-            listofEbalos.Add(eblo2);
-            listofEbalos.Add(eblo3);
+            Tabalo tablo1 = new Tabalo("Tabalo", 5);
+            Tabalo tablo2 = new Tabalo("Tabalo", 15);
+            Tabalo tablo3 = new Tabalo("Tabalo", 15);
+            listofTabalos.Add(tablo1);
+            listofTabalos.Add(tablo2);
+            listofTabalos.Add(tablo3);
         }
 
-        private static void UpdateObject<T>(T eblo)
+        private static void UpdateObject<T>(T tablo)
         {
-            Ebalo eb = eblo as Ebalo;
-            eb.S = "zakroi ebalo";
+            Tabalo eb = tablo as Tabalo;
+            eb.S = "zakroi Tabalo";
             eb.I = 25;
         }
-        private static void UpdateObject(Ebalo eblo)
+        private static void UpdateObject(Tabalo tablo)
         {
-            Ebalo eblo2 = eblo;
-            //Ebalo eblo2  = new Ebalo("naxui idi", 888);
+            Tabalo tablo2 = tablo;
+            //Tabalo tablo2  = new Tabalo("naxui idi", 888);
 
-            eblo2.S = "str+";
-            eblo2.I = 22;
+            tablo2.S = "str+";
+            tablo2.I = 22;
         }
         private static void UpdateString(ref string str)
         {

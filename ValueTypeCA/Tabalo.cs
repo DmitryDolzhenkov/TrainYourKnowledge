@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ValueTypeCA
 {
-    public class Ebalo
+    public class Tabalo
     {
         public string S { get; set; }
         public int I { get; set; }
-        public Ebalo(string str, int i)
+        public Tabalo(string str, int i)
         {
             S = str;
             I = i;
@@ -33,7 +33,7 @@ namespace ValueTypeCA
                 return false;
             }
             else {
-                Ebalo e = (Ebalo)obj;
+                Tabalo e = (Tabalo)obj;
                 return (S == e.S) && (I == e.I);
             }
         }

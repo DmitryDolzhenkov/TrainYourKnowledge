@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication4
 {
-    public class Chore
+    public class Chore : IDolzhable
     {
         public Chore()
         {
-            
+
+        }
+
+        public bool ISDolzhEndorseYou(object person)
+        {
+            throw new NotImplementedException();
         }
     }
+    public struct Dolzh : IDolzhable
+    {
+        public string Poo;
+
+        public bool ISDolzhEndorseYou(object person)
+        {
+            throw new NotImplementedException();
+        }
+    }
+        
 }

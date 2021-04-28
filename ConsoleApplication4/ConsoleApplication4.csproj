@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="ArrayCollection.cs" />
     <Compile Include="Chore.cs" />
+    <Compile Include="IDolzhable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

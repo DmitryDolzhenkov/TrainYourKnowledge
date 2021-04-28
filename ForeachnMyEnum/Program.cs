@@ -7,25 +7,30 @@ namespace ForeachnMyEnum
     {
         static void Main(string[] args)
         {
-
             var collection = new MyCollection<int>();
-            collection.Add(1); 
+            collection.Add(1);
             collection.Add(2);
             collection.Add(3);
             collection.Add(4);
             collection.Add(5);
             int i = collection[1];
 
-            var collection1 = new MyCollection<string>();
-            collection1.Add("sdt");
-            collection1.Add("dd");
-            collection1.Add("dd");
-            collection1.Add("dddd");
-            collection1.Add("dddd");
-            string j = collection1.Data[1];
+            var collectionstr = new MyCollection<string>();
+            collectionstr.Add("sdt");
+            collectionstr.Add("dd");
+            collectionstr.Add("dd");
+            collectionstr.Add("dddd");
+            collectionstr.Add("dddd");
+            string j = collectionstr.Data[1];
             foreach (var item in collection)
             {
                 Console.WriteLine(item);
+            }
+
+            var myenumerator = collectionstr.GetEnumerator();
+            while (myenumerator.MoveNext())
+            {
+                Console.WriteLine(myenumerator.Current);
             }
         }
     }
@@ -41,7 +46,6 @@ namespace ForeachnMyEnum
         {
             return new MySupperEnumerator<T>(this);
         }
-
     }
     public class MySupperEnumerator<T>
     {
@@ -55,7 +59,9 @@ namespace ForeachnMyEnum
         public T Current => _myCollection[_pointer];
         public bool MoveNext() => ++_pointer < _myCollection.Data.Count;
 
-
+        public void Reset()
+        {
+            _pointer = -1;
+        }
     }
-
 }

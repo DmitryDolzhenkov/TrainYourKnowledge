@@ -30,10 +30,10 @@ namespace ConsoleApplication4
             array.AddValue(33);
             array.AddValue(4);
 
-            array_str.AddValue("ebala");
-            array_str.AddValue("pizda");
+            array_str.AddValue("ala");
+            array_str.AddValue("pic");
             array_str.AddValue("like");
-            array_str.AddValue("rotebat");
+            array_str.AddValue("roatebat");
             array_str.AddValue("ale_blya");
             
 
@@ -44,7 +44,7 @@ namespace ConsoleApplication4
             Console.WriteLine(array_str.GetLength());
 
             array_str.Remove("valera");
-            array_str.Remove("rotebat");
+            array_str.Remove("roatetbat");
            // Console.WriteLine('\n');
 
             Console.WriteLine(array_str.GetLength());
